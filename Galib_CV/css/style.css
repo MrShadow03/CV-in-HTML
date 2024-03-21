@@ -36,6 +36,7 @@ body{
     background-color: #1b1d2b13;
 }
 
+
 /* typography starts */
 h1{
     font-size: 3.6rem;
@@ -121,6 +122,22 @@ aside p, aside a{
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
 }
 
+@media print {
+    body{
+        background-color: var(--white);
+    }
+    .main .container{
+        box-shadow: none;
+        /* fit to A4 size */
+        /* width: 21cm; */
+        height: 35cm;
+        margin: 0;
+    }
+    .right_side{
+        height: 100vh;
+    }
+}
+
 .main .container .left_side{
     width: 55rem;
     background-color: var(--primary-color);
@@ -178,6 +195,24 @@ aside p, aside a{
     padding-right: 6rem;
 }
 
+.github_profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.github_profile .profile_icon{
+    width: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.github_profile .profile_link{
+    font-size: 1.4rem;
+    color: var(--black);
+    opacity: .9;
+
+}
 .main .container .right_side section.about_section p.bio{
     font-size: 1.4rem;
     line-height: 2.4rem;
